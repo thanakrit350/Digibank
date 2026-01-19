@@ -1,0 +1,466 @@
+/* ==================== RESET & BASE ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== LAYOUT ==================== */
+
+.register-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+/* Left image section */
+.register-left {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex: 0 0 35%;
+  min-width: 320px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url('../assets/mountain-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right form section */
+.register-right {
+  flex: 1;
+  padding: 48px 60px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.register-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #1a1a1a;
+}
+
+/* ==================== CONTENT CONTAINER ==================== */
+
+.register-content {
+  display: flex;
+  gap: 48px;
+}
+
+/* ==================== STEP INDICATORS ==================== */
+
+.register-steps {
+  flex: 0 0 220px;
+  padding-top: 10px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.step-circle.current {
+  background: #ffeb3b;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(255, 235, 59, 0.4);
+}
+
+.step-circle.done {
+  background: #00c853;
+  }
+
+.step-label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.step-line {
+  width: 2px;
+  height: 40px;
+  background: #e0e0e0;
+  margin: -10px 0 0 19px;
+}
+
+/* ==================== FORM ==================== */
+
+.register-form {
+  flex: 1;
+  max-width: 720px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #ff4444;
+}
+
+.err-text {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+}
+
+/* ==================== ROW LAYOUT ==================== */
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ==================== BUTTONS ==================== */
+
+.form-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* ปุ่มอยู่กลาง */
+}
+
+.login-option {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* ให้ "มีบัญชีอยู่แล้ว ?" ชิดขวา */
+  margin-bottom: 8px;
+}
+
+
+.next-btn,
+.back-btn {
+  padding: 12px 32px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.next-btn {
+  background: #667eea;
+}
+
+.next-btn:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.next-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.back-btn {
+  background: #e0e0e0;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;     /* ให้ดูเป็นปุ่มกลม ๆ ด้านบน */
+  position: absolute;
+  top: 16px;
+  right: 60px;               /* ให้ตรงกับ padding ของ .register-right */
+  z-index: 10;
+}
+
+.back-btn:hover {
+  background: #d0d0d0;
+}
+
+
+.already {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #667eea;
+  cursor: pointer;
+  text-decoration: underline;
+  font: inherit;
+}
+.already:hover {
+  color: #5568d3;
+}
+
+/* ==================== PIN SECTION ==================== */
+
+.pin-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.pin-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.pin-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.pin-input-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.pin-input {
+  width: 56px !important;
+  height: 56px;
+  font-size: 24px;
+  font-weight: 600;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.pin-input:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+.pin-actions {
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ==================== SUCCESS MODAL ==================== */
+
+.modal-open .register-left,
+.modal-open .register-right {
+  filter: blur(4px) brightness(0.7);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-card {
+  background: white;
+  padding: 48px 40px;
+  border-radius: 16px;
+  min-width: 400px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: #00c853;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin: 0 auto 24px;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.modal-card h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.modal-card p {
+  color: #666;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.modal-card .next-btn {
+  width: 100%;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .register-page {
+    flex-direction: column;
+  }
+
+  .register-left {
+    width: 100%;
+    min-height: 200px;
+    flex: 0 0 auto;
+  }
+
+  .register-right {
+    padding: 32px 20px;
+  }
+
+  .register-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .register-steps {
+    display: flex;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .step-line {
+    display: none;
+  }
+
+  .step-item {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .step-label {
+    font-size: 12px;
+  }
+
+  .modal-card {
+    min-width: 320px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .row .form-group {
+    margin-bottom: 20px;
+  }
+
+  .register-title {
+    font-size: 24px;
+  }
+
+  .pin-input {
+    width: 48px !important;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .form-actions {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .form-actions .next-btn,
+  .form-actions .back-btn {
+    width: 100%;
+  }
+
+  .already {
+    order: -1;
+    margin-bottom: 16px;
+  }
+
+  .back-btn {
+    position: static;
+    align-self: flex-end;
+    margin-bottom: 8px;
+  }
+}
+
+.error-icon {
+  font-size: 48px;
+  color: #ff4444;
+  margin-bottom: 12px;
+}
