@@ -1,0 +1,613 @@
+{
+  "login": {
+    "title": "Login",
+    "username": "Email or Username",
+    "password": "Password",
+    "submit": "Login",
+    "forgot": "Forgot password?",
+    "success": "Login successful",
+    "failTryAgain": "Unable to login. Please try again.",
+    "invalidCreds": "Invalid username or password",
+    "createAccount": "Create new account",
+    "usernamePlaceholder": "Enter email or username",
+    "passwordPlaceholder": "Enter password"
+  },
+  "forgot": {
+    "title": "Forgot Password",
+    "email": "Email",
+    "pin": "PIN",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "submit": "Reset Password",
+    "cancel": "Cancel",
+    "emailPlaceholder": "Enter email",
+    "pinPlaceholder": "Enter PIN",
+    "newPasswordPlaceholder": "Enter new password",
+    "confirmPasswordPlaceholder": "Confirm new password",
+    "notFoundEmail": "No account found with this email",
+    "resetSuccessLoginAgain": "Password reset successful. Please login again.",
+    "resetFail": "Unable to reset password",
+    "pinInvalid": "Invalid PIN or verification data"
+  },
+  "modal": {
+    "successTitle": "Success",
+    "errorTitle": "Error",
+    "ok": "OK"
+  },
+  "validation": {
+    "requiredUser": "Please enter email or username",
+    "requiredPassword": "Please enter password",
+    "passwordMin8": "Password must be at least 8 characters",
+    "requiredEmail": "Please enter email",
+    "emailInvalid": "Invalid email format",
+    "requiredPin": "Please enter PIN",
+    "pin6digits": "PIN must be 6 digits",
+    "requiredNewPassword": "Please enter new password",
+    "requiredConfirmNewPassword": "Please confirm new password",
+    "passwordMismatch": "Passwords do not match",
+    "passwordNeedComplex": "Password must include at least 1 letter, 1 number, and 1 special character"
+  },
+  "nav": {
+    "home": "Home",
+    "transactions": "Transactions",
+    "account": "Account",
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "profile": {
+    "title": "Profile",
+    "email": "Email",
+    "phone": "Phone",
+    "birthDate": "Date of birth",
+    "memberId": "National ID",
+    "edit": "Edit profile",
+    "logout": "Logout",
+    "nameFormat": "{{first}} {{last}}"
+  },
+  "lang": {
+    "th": "Thai",
+    "en": "English"
+  },
+  "logout": {
+    "title": "Confirm logout",
+    "confirm": "Do you want to logout?",
+    "ok": "Confirm",
+    "cancel": "Cancel"
+  },
+  "register": {
+    "title": "Register",
+    "titleAddress": "Address Information",
+    "titlePinSet": "Set PIN",
+    "titlePinConfirm": "Confirm PIN",
+    "step1": "Personal Information",
+    "step2": "Address",
+    "step3": "Set PIN",
+    "day": "Day",
+    "month": "Month",
+    "year": "Year",
+    "memberId": "National ID",
+    "prefixTh": "Title (Thai)",
+    "prefixEn": "Title (English)",
+    "pick": "Select",
+    "pickEn": "Select",
+    "prefix": {
+      "mrTh": "Mr.",
+      "mrsTh": "Mrs.",
+      "msTh": "Ms."
+    },
+    "firstName": "First name",
+    "lastName": "Last name",
+    "firstNameTh": "First name (Thai)",
+    "lastNameTh": "Last name (Thai)",
+    "firstNameEn": "First name (English)",
+    "lastNameEn": "Last name (English)",
+    "email": "Email",
+    "birthDate": "Date of birth",
+    "phone": "Phone number",
+    "phonePlaceholder": "0812345678",
+    "username": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "alreadyHaveAccount": "Already have an account?",
+    "next": "Next",
+    "back": "Back",
+    "confirm": "Confirm",
+    "checking": "Checking...",
+    "submitting": "Submitting...",
+    "pin": "PIN",
+    "confirmPin": "Confirm PIN",
+    "pinSetTitle": "Set PIN",
+    "pinSetSubtitle": "Please enter 6 digits to set your PIN",
+    "pinConfirmTitle": "Confirm PIN",
+    "pinConfirmSubtitle": "Please enter the 6 digits again to confirm your PIN",
+    "successTitle": "Registration successful",
+    "successMsg": "Welcome!",
+    "goLogin": "Go to Login",
+    "errorTitle": "Error",
+    "geoLoadFail": "Unable to load province data. Please try again.",
+    "address": {
+      "house": "Address",
+      "housePlaceholder": "House No., Village No., etc.",
+      "soi": "Soi",
+      "road": "Road",
+      "province": "Province",
+      "district": "District",
+      "subDistrict": "Sub-district",
+      "postal": "Postal code",
+      "postalPlaceholder": "Postal code",
+      "pickProv": "Select province",
+      "pickDist": "Select district",
+      "pickSub": "Select sub-district"
+    },
+    "err": {
+      "memberIdRequired": "Please enter your national ID",
+      "memberId13": "National ID must be 13 digits",
+      "memberIdInvalid": "Invalid national ID",
+      "prefixPick": "Please select a title",
+      "nameRequired": "Please fill in the required field",
+      "nameLangOnly": "Please enter the correct language",
+      "emailRequired": "Please enter email",
+      "emailInvalid": "Invalid email format",
+      "birthRequired": "Please select your date of birth",
+      "ageMin15": "You must be at least 15 years old",
+      "birthInvalid": "Invalid date of birth",
+      "phoneRequired": "Please enter phone number",
+      "phoneInvalid": "Invalid phone number (10 digits, starts with 0)",
+      "usernameRequired": "Please enter username",
+      "usernameMin6": "Username must be at least 6 characters",
+      "usernameRule": "Username must be 6–20 characters and can include only a-z A-Z 0-9 _",
+      "passwordRequired": "Please enter password",
+      "passwordMin8": "Password must be at least 8 characters",
+      "passwordComplex": "Password must include at least 1 letter, 1 number, and 1 special character",
+      "confirmRequired": "Please confirm your password",
+      "passwordMismatch": "Passwords do not match",
+      "postalRequired": "Please enter postal code",
+      "postal5": "Postal code must be 5 digits",
+      "addressPick": "Please complete the selection",
+      "addressThaiOnly": "Please enter in Thai",
+      "addressRequired": "This field is required",
+      "addressTooLong": "Text is too long",
+      "addressChars": "Allowed: Thai/English letters, numbers, and . / - , ( ) #",
+      "pin6": "Please enter a 6-digit PIN",
+      "confirmPin6": "Please enter a 6-digit Confirm PIN",
+      "pinMismatch": "PIN and Confirm PIN do not match",
+      "idUsed": "This national ID is already registered",
+      "emailUsed": "This email is already registered",
+      "usernameUsed": "This username is already registered",
+      "checkFail": "Unable to verify. Please try again.",
+      "generic": "Something went wrong"
+    }
+  },
+  "dashboard": {
+    "loading": "Loading...",
+    "balance": {
+      "label": "Available balance",
+      "noAccountAmount": "- ฿",
+      "noAccountInfo": "Please open an account to use this feature",
+      "frozenAmount": "- ฿",
+      "frozenInfoLine1": "This account is frozen. Transactions are disabled.",
+      "accountNo": "Account No: {{accountId}}",
+      "owner": "{{firstName}} {{lastName}}",
+      "warning": "Your primary account is frozen. Please contact Digibank to unfreeze your account."
+    },
+    "quick": {
+      "title": "Quick actions",
+      "transfer": "Transfer",
+      "deposit": "Deposit",
+      "withdraw": "Withdraw",
+      "summary": "Transaction Summary",
+      "checkAccount": "Check account",
+      "short": {
+        "transfer": "Send",
+        "deposit": "Dep",
+        "withdraw": "W/D",
+        "summary": "Sum",
+        "check": "Check"
+      }
+    },
+    "favorites": {
+      "title": "Favorite accounts",
+      "manage": "Manage",
+      "empty": "No favorite accounts yet",
+      "add": "+ Add favorite account",
+      "transferBtn": "Transfer"
+    },
+    "recent": {
+      "title": "Recent transactions",
+      "viewAll": "View all",
+      "empty": "No transactions yet"
+    },
+    "txType": {
+      "receive": "Receive",
+      "transfer": "Transfer",
+      "deposit": "Deposit",
+      "withdraw": "Withdraw"
+    },
+    "txDesc": {
+      "deposit": "Online deposit",
+      "withdraw": "Online withdrawal",
+      "transferFormat": "{{from}} ➜ {{to}}",
+      "dash": "-"
+    },
+    "pinModal": {
+      "title": "Enter PIN to use favorite account",
+      "placeholder": "Enter 6-digit PIN",
+      "confirm": "Confirm PIN",
+      "cancel": "Cancel",
+      "errRequired": "Please enter PIN",
+      "errFormat": "PIN must be 6 digits"
+    }
+  },
+  "transactions": {
+    "title": "All transactions",
+    "openNewAccount": "+ Open new account",
+    "accountTypeSaving": "💰 Savings account",
+    "accountNameFormat": "{{name}}'s account",
+    "defaultAccountName": "Savings account",
+    "slip": {
+      "cash": "Cash"
+    },
+    "status": {
+      "label": "● {{status}}",
+      "frozen": "Frozen",
+      "active": "Active"
+    },
+    "balance": {
+      "label": "Balance"
+    },
+    "quick": {
+      "transferShort": "Send",
+      "transfer": "Transfer",
+      "depositShort": "Dep",
+      "deposit": "Deposit",
+      "withdrawShort": "W/D",
+      "withdraw": "Withdraw",
+      "summaryShort": "Sum",
+      "summary": "Transaction summary",
+      "checkShort": "Check",
+      "check": "Check account"
+    },
+    "stats": {
+      "income": "Income",
+      "expense": "Expense",
+      "net": "Net"
+    },
+    "filters": {
+      "all": "All",
+      "receive": "Receive",
+      "transfer": "Transfer",
+      "deposit": "Deposit",
+      "withdraw": "Withdraw",
+      "searchPlaceholder": "Search transactions..."
+    },
+    "export": {
+      "xlsx": "Export Excel",
+      "sheetName": "Transactions"
+    },
+    "empty": {
+      "loading": "Loading...",
+      "notFound": "No transactions found for this account"
+    },
+    "txType": {
+      "receive": "Receive",
+      "transfer": "Transfer",
+      "deposit": "Deposit",
+      "withdraw": "Withdraw"
+    },
+    "txDesc": {
+      "deposit": "Online deposit",
+      "withdraw": "Online withdrawal",
+      "format": "{{from}} ➜ {{to}}",
+      "dash": "-"
+    },
+    "txStatus": {
+      "success": "Success",
+      "canceled": "Canceled",
+      "pending": "Pending"
+    },
+    "modal": {
+      "openAccountTitle": "Open new account",
+      "memberIdLabel": "National ID",
+      "memberIdPlaceholder": "Enter national ID",
+      "pinLabel": "PIN (6 digits)",
+      "pinPlaceholder": "Enter 6-digit PIN",
+      "submit": "Confirm",
+      "submitting": "Opening...",
+      "cancel": "Cancel"
+    },
+    "validation": {
+      "memberIdRequired": "Please enter national ID",
+      "pinRequired": "Please enter PIN",
+      "pin6digits": "PIN must be 6 digits",
+      "openAccountFail": "Unable to open account. Please try again."
+    },
+    "excel": {
+      "no": "No.",
+      "date": "Date",
+      "type": "Type",
+      "amount": "Amount",
+      "status": "Status",
+      "fromAcc": "From account",
+      "fromName": "From name",
+      "toAcc": "To account",
+      "toName": "To name",
+      "accountId": "Account used"
+    }
+  },
+  "slip": {
+    "dash": "-",
+    "txType": {
+      "receive": "Receive",
+      "transfer": "Transfer",
+      "deposit": "Deposit",
+      "withdraw": "Withdraw"
+    },
+    "status": {
+      "success": "Transaction successful",
+      "receiveSuccess": "Receive successful",
+      "transferSuccess": "Transfer successful",
+      "depositSuccess": "Deposit successful",
+      "withdrawSuccess": "Withdrawal successful"
+    },
+    "party": {
+      "from": "From",
+      "to": "To",
+      "depositIn": "Deposit to",
+      "withdrawFrom": "Withdraw from",
+      "accountNo": "Account No",
+      "receiverAccount": "Receiver account"
+    },
+    "fields": {
+      "amount": "Amount",
+      "referenceNo": "Reference No",
+      "fee": "Fee"
+    },
+    "unit": {
+      "baht": "THB"
+    },
+    "note": {
+      "scanToVerify": "Scan to verify slip"
+    },
+    "send": {
+      "button": "Send slip to email",
+      "success": "✅ Slip has been sent to your email",
+      "fail": "Failed to send email. Please try again."
+    },
+    "close": "Close"
+  },
+  "summary": {
+    "title": "Transaction Summary",
+    "subtitle": "Daily transaction summary report",
+    "fromDate": "From date",
+    "toDate": "To date",
+    "clearDate": "Clear",
+    "hint": "💡 If you don’t select dates, all data will be shown",
+    "loading": "Loading...",
+    "notFound": "No summary data found for the selected date range",
+    "tableTitle": "Daily report",
+    "items": "items",
+    "col": {
+      "date": "Date",
+      "deposit": "Total deposits",
+      "withdraw": "Total withdrawals",
+      "transfer": "Total transfers",
+      "receive": "Total received",
+      "total": "Daily total"
+    },
+    "baht": "THB",
+    "search": "Search"
+  },
+  "editProfile": {
+    "title": "Edit Profile",
+    "firstName": "First name (TH)",
+    "lastName": "Last name (TH)",
+    "email": "Email",
+    "phone": "Phone",
+    "birthDate": "Date of birth",
+    "memberId": "National ID",
+    "username": "Username",
+    "cancel": "Cancel",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "successMsg": "Profile saved successfully",
+    "failMsg": "Unable to save. Please try again.",
+    "notFound": "User not found",
+    "err": {
+      "firstNameRequired": "Please enter first name",
+      "firstNameThaiOnly": "Thai characters only",
+      "lastNameRequired": "Please enter last name",
+      "lastNameThaiOnly": "Thai characters only",
+      "emailRequired": "Please enter email",
+      "emailInvalidDomain": "Invalid email or unsupported domain"
+    }
+  },
+  "deposit": {
+    "title": "Deposit",
+    "loadingAccounts": "Loading account data...",
+    "noActiveAccount": "No active account available for deposit transactions",
+    "section": {
+      "details": "Deposit details",
+      "txSummary": "Transaction details"
+    },
+    "toAccountLabel": "Destination account",
+    "amountLabel": "Deposit amount",
+    "datetimeLabel": "Date & time",
+    "afterBalanceLabel": "Balance after transaction",
+    "txTypeLabel": "Transaction type",
+    "balanceText": "Balance",
+    "hint": "Fill in the form on the left to preview the transaction summary before confirming",
+    "security": {
+      "title": "Security",
+      "desc": "Your transaction data is encrypted and protected under banking security standards."
+    },
+    "back": "Back",
+    "next": "Next",
+    "edit": "Edit",
+    "confirm": "Confirm deposit",
+    "processing": "Processing...",
+    "moreLabel": "Additional details",
+    "moreText": "Deposit via online system",
+    "successTitle": "Deposit successful",
+    "slipTitle": "Deposit confirmation slip",
+    "err": {
+      "required": "Please enter the deposit amount",
+      "nan": "Amount must be a number",
+      "min": "Amount must be greater than 0",
+      "max": "Amount must not exceed 1,000,000 THB",
+      "decimals": "Amount can have up to 2 decimal places",
+      "fail": "Unable to deposit. Please try again."
+    }
+  },
+
+  "transfer": {
+    "title": "Transfer",
+    "loadingAccounts": "Loading account data...",
+    "noActiveAccount": "No active account available for transfer transactions",
+    "section": {
+      "details": "Transfer details",
+      "txSummary": "Transaction details"
+    },
+    "fromAccountLabel": "From account",
+    "toAccountLabel": "To account",
+    "toAccountPlaceholder": "Enter destination account number",
+    "amountLabel": "Transfer amount",
+    "datetimeLabel": "Date & time",
+    "txTypeLabel": "Transaction type",
+    "hint": "Fill in the form on the left to preview the transaction summary before confirming",
+    "back": "Back",
+    "next": "Next",
+    "edit": "Edit",
+    "confirm": "Confirm transfer",
+    "pinModal": {
+      "title": "Enter PIN to transfer",
+      "placeholder": "Enter 6-digit PIN",
+      "confirm": "Confirm PIN",
+      "checking": "Verifying...",
+      "cancel": "Cancel"
+    },
+    "slip": {
+      "successTitle": "Transfer successful",
+      "slipTitle": "Transfer confirmation slip",
+      "ref": "Reference No",
+      "type": "Transaction type",
+      "amount": "Transfer amount",
+      "from": "From account",
+      "to": "To account",
+      "datetime": "Date & time",
+      "afterBalance": "Balance after transaction"
+    },
+    "err": {
+      "toRequired": "Please enter destination account number",
+      "toDigits": "Account number must be 6–20 digits",
+      "toSelf": "You cannot transfer to your own account",
+      "amountRequired": "Please enter the transfer amount",
+      "nan": "Amount must be a number",
+      "min": "Amount must be greater than 0",
+      "max": "Amount must not exceed 1,000,000 THB",
+      "decimals": "Amount can have up to 2 decimal places",
+      "insufficient": "Insufficient balance for this transaction",
+      "pinRequired": "Please enter PIN",
+      "pin6digits": "PIN must be 6 digits",
+      "fail": "Unable to transfer. Please try again."
+    }
+  },
+  "withdraw": {
+    "title": "Withdraw",
+    "section": {
+      "details": "Withdraw details",
+      "txSummary": "Transaction details"
+    },
+    "fromAccountSelectLabel": "Withdraw from account",
+    "amountInputLabel": "Withdrawal amount",
+    "balanceText": "Balance",
+    "security": {
+      "title": "Security system",
+      "desc": "Your transaction data is encrypted and protected according to bank security standards."
+    },
+    "back": "Back",
+    "next": "Next",
+    "hint": "Fill in the left side to preview the transaction summary before confirming.",
+    "txTypeLabel": "Transaction type",
+    "fromAccountLabel": "From account",
+    "fromAccountLabel2": "Withdraw from",
+    "amountLabel": "Amount withdrawn",
+    "amountSummaryLabel": "Amount",
+    "datetimeLabel": "Date & time",
+    "moreLabel": "Additional details",
+    "moreText": "Online withdrawal from your account",
+    "edit": "Edit",
+    "confirm": "Confirm withdrawal",
+    "processing": "Processing...",
+    "successTitle": "Withdrawal successful",
+    "slipTitle": "Withdrawal confirmation slip",
+    "afterBalanceLabel": "Balance after transaction",
+    "noActiveAccount": "No active accounts available for withdrawal transactions.",
+    "loadingAccounts": "Loading accounts...",
+    "err": {
+      "required": "Please enter the withdrawal amount",
+      "nan": "Amount must be a number",
+      "min": "Amount must be greater than 0",
+      "max": "Amount must not exceed 1,000,000 THB",
+      "decimals": "Amount can have up to 2 decimal places",
+      "insufficient": "Insufficient balance to complete the transaction",
+      "fail": "Unable to withdraw. Please try again."
+    },
+    "pin": {
+      "title": "Enter PIN to withdraw",
+      "placeholder": "Enter 6-digit PIN",
+      "checking": "Checking...",
+      "confirmPin": "Confirm PIN",
+      "cancel": "Cancel",
+      "err": {
+        "required": "Please enter PIN",
+        "format": "PIN must be 6 digits"
+      }
+    }
+  },
+  "checkAccount": {
+    "title": "Check my accounts",
+    "loading": "Loading accounts...",
+    "empty": "No accounts found",
+    "unknownOwner": "Unknown owner",
+    "accountNo": "Account No: {{accountId}}",
+    "statusLabel": "Status: {{status}}",
+    "deleteBtn": "Delete account",
+    "status": {
+      "active": "Active",
+      "frozen": "Frozen"
+    },
+    "modal": {
+      "confirmTitle": "Confirm account deletion",
+      "confirmText": "Do you want to delete account",
+      "confirmText2": "?",
+      "confirmDelete": "Confirm delete",
+      "cancel": "Cancel"
+    },
+    "msg": {
+      "deleteSuccess": "Account deleted successfully",
+      "deleteFailBalance": "Unable to delete the account because the balance is not zero"
+    }
+  },
+  "favorites": {
+    "title": "Manage favorite accounts",
+    "back": "← Back",
+    "addTitle": "Add a new favorite",
+    "addBtn": "Add favorite",
+    "listTitle": "Your favorites",
+    "empty": "No favorite accounts yet",
+    "removeBtn": "Remove",
+    "bankName": "Digibank",
+    "form": {
+      "nameLabel": "Favorite name",
+      "namePlaceholder": "e.g., Friend, Mom, Company, etc.",
+      "accountLabel": "Account number",
+      "accountPlaceholder": "Enter account number (6–20 digits)"
+    },
+    "err": {
+      "required": "Please enter both a favorite name and an account number",
+      "accountFormat": "Account number must be 6–20 digits",
+      "duplicate": "This account is already in your favorites",
+      "noUser": "User not found. Please login again."
+    }
+  }
+}

@@ -1,0 +1,618 @@
+/* ==================== SUMMARY PAGE THEME ==================== */
+
+:root {
+  --primary-blue: #0066cc;
+  --primary-dark: #004999;
+  --primary-light: #3385d6;
+  --success-green: #00a651;
+  --warning-yellow: #ffb900;
+  --danger-red: #e63946;
+  --text-dark: #1a1a1a;
+  --text-gray: #666666;
+  --text-light: #999999;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== PAGE CONTAINER ==================== */
+
+.summary-page {
+  background: var(--bg-light);
+  min-height: 100vh;
+  padding: 32px 24px;
+}
+
+.summary-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ==================== HEADER ==================== */
+
+.summary-header {
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: 15px;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+/* ==================== DATE FILTER CARD ==================== */
+
+.date-filter-card {
+  background: var(--bg-white);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--border-color);
+}
+
+.filter-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.date-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 0 0 200px;
+}
+
+.date-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-gray);
+}
+
+.date-input {
+  padding: 12px 14px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: var(--bg-white);
+  color: var(--text-dark);
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.clear-date-btn {
+  padding: 12px 24px;
+  background: var(--danger-red);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clear-date-btn:hover {
+  background: #cc333a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(242, 241, 241, 0.3);
+}
+
+.btn-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.filter-hint {
+  font-size: 13px;
+  color: var(--text-light);
+  padding: 12px 16px;
+  background: rgba(0, 102, 204, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-blue);
+}
+
+/* ==================== SUMMARY CARDS ==================== */
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.summary-card {
+  background: var(--bg-white);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.summary-card:hover::before {
+  transform: scaleX(1);
+}
+
+.summary-card.income::before {
+  background: linear-gradient(90deg, var(--success-green), #00d66a);
+}
+
+.summary-card.expense::before {
+  background: linear-gradient(90deg, var(--danger-red), #ff7b85);
+}
+
+.summary-card.net::before {
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-light));
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.summary-card.income .card-icon {
+  background: linear-gradient(135deg, var(--success-green) 0%, #00d66a 100%);
+}
+
+.summary-card.expense .card-icon {
+  background: linear-gradient(135deg, var(--danger-red) 0%, #ff7b85 100%);
+}
+
+.summary-card.net .card-icon {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-light) 100%);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-label {
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.card-amount {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.card-amount.positive {
+  color: var(--success-green);
+}
+
+.card-amount.negative {
+  color: var(--danger-red);
+}
+
+.card-detail {
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ==================== TABLE CARD ==================== */
+
+.table-card {
+  background: var(--bg-white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--border-color);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--bg-light);
+}
+
+.table-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.table-badge {
+  background: var(--primary-blue);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* ==================== TABLE ==================== */
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-table thead {
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 102, 204, 0.1) 100%);
+}
+
+.summary-table th {
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-blue);
+  border-bottom: 2px solid var(--primary-light);
+  white-space: nowrap;
+}
+
+.th-date {
+  text-align: left !important;
+  padding-left: 20px !important;
+}
+
+.th-total {
+  background: rgba(0, 102, 204, 0.08);
+}
+
+.table-row {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.table-row:hover {
+  background: rgba(0, 102, 204, 0.02);
+  transform: translateX(4px);
+}
+
+.summary-table td {
+  padding: 16px 12px;
+  text-align: right;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.td-date {
+  text-align: left !important;
+  padding-left: 20px !important;
+}
+
+.date-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date-day {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  line-height: 1;
+}
+
+.date-month-year {
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.3;
+}
+
+.td-amount {
+  font-weight: 500;
+  font-family: 'Courier New', monospace;
+}
+
+.td-amount.positive {
+  color: var(--success-green);
+}
+
+.td-amount.negative {
+  color: var(--text-gray);
+}
+
+.td-total {
+  font-weight: 700;
+  background: rgba(0, 102, 204, 0.03);
+}
+
+.total-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.td-total.positive .total-badge {
+  background: rgba(0, 166, 81, 0.1);
+  color: var(--success-green);
+}
+
+.td-total.negative .total-badge {
+  background: rgba(230, 57, 70, 0.1);
+  color: var(--danger-red);
+}
+
+/* ==================== EMPTY STATE ==================== */
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--bg-white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 2px dashed var(--border-color);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: fadeIn 0.5s ease;
+}
+
+.empty-icon.loading {
+  color: var(--primary-blue);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.empty-text {
+  font-size: 18px;
+  color: var(--text-gray);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.empty-hint {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    gap: 16px;
+  }
+
+  .date-input-group {
+    flex: 1 1 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .summary-page {
+    padding: 20px 16px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+  }
+
+  .date-filter-card {
+    padding: 20px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .date-input-group {
+    flex: 1;
+  }
+
+  .clear-date-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .summary-card {
+    padding: 20px;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-amount {
+    font-size: 24px;
+  }
+
+  .table-card {
+    padding: 16px;
+  }
+
+  .table-wrapper {
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+
+  .summary-table th,
+  .summary-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .date-day {
+    font-size: 20px;
+  }
+
+  .date-month-year {
+    font-size: 11px;
+  }
+
+  .total-badge {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .summary-table th,
+  .summary-table td {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+
+  .th-date,
+  .td-date {
+    padding-left: 12px !important;
+  }
+
+  .date-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .date-day {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 20px;
+  }
+
+  .card-amount {
+    font-size: 20px;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .table-badge {
+    align-self: flex-start;
+  }
+}
+.search-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--success-green) 0%, #00d66a 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.22);
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(0, 166, 81, 0.28);
+  filter: brightness(1.02);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 166, 81, 0.22);
+  filter: brightness(0.98);
+}
+
+.search-btn:focus {
+  outline: none;
+}
+
+.search-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 166, 81, 0.18), 0 10px 18px rgba(0, 166, 81, 0.25);
+}
+
+.search-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+  filter: grayscale(0.2);
+}

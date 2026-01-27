@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.login-left {
+  flex: 0 0 35%;
+  min-width: 320px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url("../assets/mountain-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 60px;
+  background: #ffffff;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 32px 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.login-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12);
+}
+
+.login-input.error {
+  border-color: #ff4444;
+}
+
+.err-text {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.login-forgot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.login-button:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  cursor: pointer;
+  color: #667eea;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+  color: #5568d3;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+  font-size: 12px;
+  color: #777;
+}
+
+.login-divider .line {
+  flex: 1;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.login-divider .or-text {
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.create-account {
+  display: block;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-card {
+  background: white;
+  padding: 32px 28px;
+  border-radius: 16px;
+  min-width: 340px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  animation: slideUp 0.3s ease;
+  position: relative;
+  z-index: 2001;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-icon,
+.error-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #fff;
+}
+
+.success-icon {
+  background: #00c853;
+}
+
+.error-icon {
+  background: #ff4444;
+}
+
+.modal-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.modal-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.next-btn {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.next-btn:hover {
+  background: #5568d3;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 960px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .login-left {
+    width: 100%;
+    min-height: 200px;
+    flex: 0 0 auto;
+  }
+
+  .login-right {
+    padding: 32px 20px;
+  }
+
+  .login-card {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-card {
+    padding: 24px 20px 28px;
+  }
+
+  .login-title {
+    font-size: 24px;
+  }
+}
+
+.modal-card .err-text {
+  color: #ff4444;
+}
+
+.modal-card .form-group {
+  text-align: left;
+}
+
+/* ===== PASSWORD WRAP (LOGIN PAGE) ===== */
+.password-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrap .login-input {
+  width: 100%;
+  padding-right: 46px;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  z-index: 9999;
+  color: #111827;
+}
+
+.toggle-eye svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  color: currentColor;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+}
+
+/* ===== FIX: Eye icon in FORGOT MODAL (force flex, disable absolute) ===== */
+.modal-card .password-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.modal-card .password-wrap .login-input {
+  flex: 1 !important;
+  width: auto !important;
+  padding-right: 12px !important;
+}
+
+.modal-card .password-wrap .toggle-eye {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e5e7eb !important;
+  background: #fff !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+  cursor: pointer !important;
+  z-index: 5 !important;
+  color: #111827 !important;
+}
+
+.modal-card .password-wrap .toggle-eye svg {
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  color: currentColor !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+}
+
+/* ปิดปุ่ม reveal ของ IE/Edge เก่า */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+.login-page.modal-open .toggle-eye {
+  display: none !important;
+}
+
+/* ===== LANGUAGE SWITCH ===== */
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 3000;
+}
+
+.lang-btn {
+  min-width: 44px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1.5px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: #f3f4f6;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+/* ปุ่มที่ถูกเลือก */
+.lang-btn.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35);
+}
+
+/* ตอน modal เปิด ให้ยังเห็นปุ่มชัด */
+.login-page.modal-open ~ .lang-switch,
+.lang-switch {
+  pointer-events: auto;
+}
