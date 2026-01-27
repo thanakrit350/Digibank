@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BankThanakritApplication<BankThanakrit>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.digio.bank.BankThanakritApplication",
+            "projectName": "BankThanakrit",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
